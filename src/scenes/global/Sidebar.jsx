@@ -59,7 +59,7 @@ const SideBar = () => {
         "& .pro-inner-item:hover": {
           color: "#868dfb !important",
         },
-        "& .pro-menu-item.active": {
+        "& .ps-menu-item.active": {
           color: "#6870fa !important",
         },
       }}
@@ -82,7 +82,7 @@ const SideBar = () => {
                 color: "#868dfb !important",
                 backgroundColor: "transparent !important",
               },
-              "&.active": {
+              "&.ps-active": {
                 color: "#6870fa !important",
                 fontWeight: "bold",
               },
