@@ -1,27 +1,26 @@
-import React, { useState } from "react";
-import {
-  Menu,
-  menuClasses,
-  MenuItem,
-  Sidebar,
-  sidebarClasses,
-} from "react-pro-sidebar";
+import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
+import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
+import HelpOutlinedIcon from "@mui/icons-material/HelpOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import HelpOutlinedIcon from "@mui/icons-material/HelpOutlined";
-import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlinedIcon from "@mui/icons-material/PieChartOutlined";
+import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
-import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
-import { tokens } from "../../theme";
+import { useState } from "react";
+import {
+  Menu,
+  MenuItem,
+  Sidebar,
+  sidebarClasses
+} from "react-pro-sidebar";
 import { Link } from "react-router-dom";
 import profilePic from "../../assets/me.jpeg";
+import { tokens } from "../../theme";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -89,6 +88,7 @@ const SideBar = () => {
             },
           }}
         >
+          {/* Logo and Menu Icon */}
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
@@ -149,6 +149,11 @@ const SideBar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+            <Typography variant="h6" color={colors.grey[300]} sx={{
+              m: '15px 0 5px 20px'
+            }}>
+              Data
+            </Typography>
             <Item
               title="Manage Team"
               to="/team"
@@ -170,6 +175,11 @@ const SideBar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+            <Typography variant="h6" color={colors.grey[300]} sx={{
+              m: '15px 0 5px 20px'
+            }}>
+              Pages
+            </Typography>
             <Item
               title="Profile Form"
               to="/form"
@@ -191,6 +201,11 @@ const SideBar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+            <Typography variant="h6" color={colors.grey[300]} sx={{
+              m: '15px 0 5px 20px'
+            }}>
+              Charts
+            </Typography>
             <Item
               title="Bar Chart"
               to="/bar"
